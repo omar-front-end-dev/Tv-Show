@@ -1,0 +1,223 @@
+nav{
+  background-color: rgba(0, 0, 0, .1);
+  color: white;
+  box-shadow: 0px 5px 10px -5px black;
+}
+
+.content{
+  position: relative;
+  min-height: 60vh;
+}
+
+.logo{
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.nav-item{
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.nav-item.active{
+  color: red;
+  transform: scale(1.1);
+}
+
+body{
+  background-color: #1b212a;
+}
+
+main{
+  padding: 40px 0;
+}
+
+.tv-show{
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+  border: 2px solid transparent;
+  transition: transform .3s, border-color .4s;
+  cursor: pointer;
+  background-image: linear-gradient(transparent 60%, #000), url('https://static.tvmaze.com/uploads/images/medium_portrait/81/202627.jpg');
+}
+
+.show-text{
+  position: absolute;
+  bottom: 15px;
+  color: white;
+}
+
+.show-title{
+  font-weight: bolder;
+}
+
+.show-category{
+  color: rgba(255, 255, 255, .7);
+  border: 0;
+}
+
+.tv-show:hover{
+  border-color: red;
+  transform: scale(1.1);
+  
+}
+
+.tv-show-container{
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.show-site-link{
+  font-size: 20px;
+}
+
+aside{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  max-width: 600px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  transform: translateX(100%);
+  background-color: #1b212a;
+  transition: .3s;
+  padding: 20px;
+  overflow: auto;
+}
+
+aside.active{
+  transform: translate(0);
+}
+
+.aside-header{
+  margin-bottom: 15px;
+}
+
+.show-img{
+  width: 100%;
+  max-height: 450px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.close-btn{
+  cursor: pointer;
+  width: 30px;
+}
+
+.close-btn img{
+  width: 100%;
+}
+
+.show-title{
+  color: white;
+}
+
+.show-content p{
+  color: white;
+}
+
+.show-genre{
+  color: rgba(255, 255, 255, .5);
+}
+
+hr{
+  color: white;
+}
+
+.search-input, .search-btn{
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 5px 15px;
+}
+
+.search-input{
+  width: 200px;
+}
+
+.search-btn{
+  margin-left: 10px;
+}
+
+.content-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-header h1{
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  aside{
+    max-width: 400px;
+  }
+  .show-img{
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 512px) {
+  .logo{
+    font-size: 20px;
+  }
+  .nav-item{
+    font-size: 16px;
+  }
+  .content-header h1{
+    margin-bottom: 15px;
+  }
+  .content-header{
+    display: block;
+  }
+}
+
+
+/* Spinner */
+
+.lds-ring {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
